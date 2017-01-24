@@ -1,0 +1,23 @@
+{
+  "name": "sample-project",
+  "private": true,
+  "version": "1.0.0",
+  "description": "sample project",
+  "scripts": {
+    "build": "tsc",
+    "bundle": "./node_modules/bin/splittable --write-to ./dist/bundle/ dist/compiled/page-one.js dist/compiled/page-two.js",
+    "build-and-bundle": "npm run clean && npm run build && npm run bundle",
+    "clean": "rm -rf dist/* && rm -rf splittable-build"
+  },
+  "author": "Dan Bucholtz <dan.b@ionic.io> (http://ionic.io)",
+  "license": "ISC",
+  "dependencies": {
+    "node-uuid": "^1.4.7",
+    "typescript": "2.0.9"
+  },
+  "devDependencies": {
+    "@types/node-uuid": "0.0.28",
+    "@types/systemjs": "^0.19.33",
+    "splittable": "^4.0.0"
+  }
+}
